@@ -2,21 +2,24 @@
 productos = {}
 flag = True
 
+def venta():
+    print("Elegiste vender un producto")
+    vender = str(input('Selecciona un producto: '))
+    if vender in productos:
+        print(productos)
+    else:
+        print('El producto no se encuentra en tu inventario')
+
 def nuevo():
     print('Nuevo producto')
-    producto = str(input('Nombre de producto: '))
+    nombre = str(input('Nombre de producto: '))
     costo = float(input("Costo de producto $:"))
     categoria = str(input('Categoria de producto: '))
-    productos = producto,[costo,categoria]
+    productos = nombre,[costo,categoria]
     print(productos)
 
-def venta():
-    v_producto = str(input('Producto en venta: '))
-    if v_producto in productos:
-        print('tu producto si esta')
-
 def inventario():
-    print('Inventario')
+    print("Elegiste realizar un inventario")
 
 while flag is True:
     print('Funciones de menu')
@@ -26,7 +29,10 @@ while flag is True:
     menu = int(input('Seleccione una opcion de menu: '))
 
     if menu == 1:
+        venta()
+    
+    elif menu == 2:
         nuevo()
     
-    if menu == 2:
-        nuevo()
+    elif menu == 3:
+        inventario()
