@@ -6,7 +6,9 @@ def venta():
     print("Elegiste vender un producto")
     vender = str(input('Selecciona un producto: '))
     if vender in productos:
-        print (f'Estas vendiendo {vender}')
+        venta = int(input('Cantidad a vender: '))
+        productos[vender][1] -= venta #funcion a mejorar
+        print(productos)
     else:
         print('El producto no se encuentra en tu inventario')
 
@@ -16,7 +18,7 @@ def nuevo():
     costo = float(input("Costo de producto $:"))
     cantidad = int(input('Cantidad inicial de este producto: '))
     categoria = str(input('Categoria de producto: '))
-    productos [nombre] = costo,cantidad,categoria
+    productos [nombre] = [costo,cantidad,categoria]
     print(productos)
 
 def inventario():
