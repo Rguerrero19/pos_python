@@ -2,16 +2,6 @@
 productos = {}
 flag = True
 
-def venta():
-    print("Elegiste vender un producto")
-    vender = str(input('Selecciona un producto: '))
-    if vender in productos:
-        venta = int(input('Cantidad a vender: '))
-        productos[vender][1] -= venta #funcion a mejorar
-        print(productos)
-    else:
-        print('El producto no se encuentra en tu inventario')
-
 def nuevo():
     print('Nuevo producto')
     nombre = str(input('Nombre de producto: '))
@@ -21,26 +11,32 @@ def nuevo():
     productos [nombre] = [costo,cantidad,categoria]
     print(productos)
 
-def inventario():
-    print("Elegiste realizar un inventario")
-    cat_inventario = str(input('Seleccione una categoria a inventariar: '))
-    if cat_inventario in (productos[categoria]):
-        print('tu categoria si esta en el  inventario')
-    else:
-        print('La categoria seleccionada no se encuentra')
+def venta():
+    print("Elegiste vender un producto")
+    
 
+def inventario():#funcion a mejorar
+    encontrado=str(input('Nombre de producto encontrado: '))
+    if encontrado in productos:
+        print(productos)
+        contado = []
+        suma = 0
+        while contado != cantidad:
+            num1 = int(input('Cantidad encontrada: '))
+            contado.append(num1)
+            print(f'Se agregaron {num1} al conteo ahora cuntas con {suma}')
 while flag is True:
     print('Funciones de menu')
 
-    print('1.- Nueva venta','\n2.- Agregar producto nuevo','\n3.- Inventario')
+    print('1.- Agregar producto','\n2.- Venta de producto','\n3.- Inventario')
 
     menu = int(input('Seleccione una opcion de menu: '))
 
     if menu == 1:
-        venta()
+        nuevo()
     
     elif menu == 2:
-        nuevo()
+        venta()
     
     elif menu == 3:
         inventario()
