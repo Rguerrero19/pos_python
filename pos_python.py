@@ -1,7 +1,7 @@
 #sistema punto de venta
 productos = {}
 flag = True
-
+#hola como estas
 def nuevo():
     print('Nuevo producto')
     nombre = str(input('Nombre de producto: '))
@@ -16,15 +16,13 @@ def venta():
     
 
 def inventario():#funcion a mejorar
-    encontrado=str(input('Nombre de producto encontrado: '))
-    if encontrado in productos:
-        print(productos)
+    prod_inventario = str(input('Nombre de producto encontrado: '))
+    if prod_inventario in productos:
         contado = []
         suma = 0
         while contado != cantidad:
-            num1 = int(input('Cantidad encontrada: '))
-            contado.append(num1)
-            print(f'Se agregaron {num1} al conteo ahora cuntas con {suma}')
+            print('te faltan')
+
 while flag is True:
     print('Funciones de menu')
 
