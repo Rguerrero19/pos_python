@@ -1,7 +1,6 @@
-#sistema punto de venta
 productos = {}
 flag = True
-#hola como estas
+
 def nuevo():
     print('Nuevo producto')
     nombre = str(input('Nombre de producto: '))
